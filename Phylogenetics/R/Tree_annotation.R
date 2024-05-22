@@ -1,18 +1,14 @@
 ## Use this file to run a particular line of analysis
 
 
-
-
-
-
-
-
-
 # base functions ----------------------------------------------------------
 
 basic.dend <- chronos(ml.dend) ## This function is required to convert an 'ape' phylogram to r-base dendrograms. It requires estimation.
 
-graphics.off()
+
+plot(ml.dend, type='cladogram')
+
+
 plot(as.dendrogram(basic.dend), horiz=T)
 plot(as.hclust(basic.dend), horiz=T)
 
