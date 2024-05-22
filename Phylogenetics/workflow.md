@@ -3,12 +3,12 @@
 # What's the deal with this gene family??
 
 ## To install
-• MEGA
-• mafft
-• raXml
-• figtree
-• R::ape
-• R::dendextend
+• MEGA 
+• mafft 
+• raXml 
+• figtree 
+• R::ape 
+• R::dendextend 
 
 
 adding another line here
