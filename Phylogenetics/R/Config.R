@@ -18,8 +18,8 @@ ml.dend <- read.tree("../Source_paper/ML_tree.nwk")
 nj.dend <- read.tree("../Source_paper/Newick Export.nwk")
 
 # my.ml.dend <- read.tree('../cli/RAxML_bestTree.T2')
-
-
+class(ml.dend)
+str(ml.dend)
 
 
 # Making a species annotation table ---------------------------------------
@@ -42,6 +42,7 @@ tree.df <- tree.df[order(tree.df$classification),]
 
 class_colors = setNames(c('red','blue','purple','orange','green'), unique(tree.df$classification))
 class_colors
+class_colors['Rosids']
 
 
 tree.df$color <- class_colors[tree.df$classification]
