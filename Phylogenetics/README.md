@@ -1,21 +1,17 @@
 
 
-# What's the deal with this gene family??
-
-## To install
+## Prerequisites
 * MEGA 
 * mafft 
-* raXml 
+* ~~raXml~~
 * figtree 
 * R::ape 
-* R::dendextend 
+* ~~R::dendextend~~
 
 
-adding another line here
+# What's the deal with this gene family??
 
-
-• We have a set of homologous genes (a family) coming from several species of plant.
-• We suspect that this family may have an HGT event, but we need to show this concretely.
+We have a set of homologous genes (a family) coming from several species of plant. We suspect that this family may have an HGT event, but we need to show this concretely.
 
 Data source:
 https://doi.org/10.1073/pnas.1608765113
