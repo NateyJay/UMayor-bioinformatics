@@ -15,11 +15,10 @@ We have a set of homologous genes (a family) coming from several species of plan
 
 Data source:
 https://doi.org/10.1073/pnas.1608765113
-Orthogroup 3861
 
-From this, we have a set of protein-sequences in FASTA format.
 
-Gene families are derived based on incongruent species and gene phylogenies
+Gene families from this paper are derived based on incongruent species and gene phylogenies
+I have downloaded 'Orthogroup 3861' from this paper as a set of protein-sequences in FASTA format. 
 
 ## 1) Form a gene-family alignment
 
