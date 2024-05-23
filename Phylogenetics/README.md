@@ -34,7 +34,7 @@ This will give us a sense of the relationship between these genes.
 3. save the output (don't close mega!)
 
 
-## 2) make an tree.
+## 2) make a tree.
 
 #### In mega we can make some trees
 1. Try a NJ tree - does it work? Need to curate any sequences?
