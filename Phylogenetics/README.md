@@ -51,6 +51,5 @@ This will give us a sense of the relationship between these genes.
 ## 4) Identify genes that are vertically- or horizontally-derived
 Annotation of tree!
 
-
-• We are going to do this totally in R, using the provided project.
+1. We are going to do this totally in R, using the provided project.
 
