@@ -9,8 +9,8 @@ basic.dend <- chronos(ml.dend) ## This function is required to convert an 'ape' 
 plot(ml.dend, type='cladogram')
 
 
-plot(as.dendrogram(basic.dend), horiz=T)
-plot(as.hclust(basic.dend), horiz=T)
+plot(as.dendrogram(basic.dend))
+plot(as.hclust(basic.dend))
 
 str(basic.dend)
 # str(as.dendrogram(basic.dend))
@@ -22,7 +22,7 @@ plot(as.hclust(basic.dend), hang=3)
 
 ?plot.dendrogram
 par(mar=c(3,3,3,14))
-plot(as.dendrogram(basic.dend), horiz=T)
+plot(basic.dend, horiz=T)
 
 
 
@@ -34,23 +34,30 @@ plot(as.dendrogram(basic.dend), horiz=T)
 
 dend <- ml.dend
 
+par(mar=c(5,8,4,2), xpd=T)
+
 # ?plot.phylo
 # class(dend)
 # graphics.off()
 
 # since plot() is being run on a "phylo" object, it automatically calls plot.phylo()
-plot(dend, 
+plot(dend, cex=0.8,
      tip.color=tree.df$color[match(dend$tip.label, tree.df$gene)],
-     cex=0.5,
      label.offset=0.03)
 
 
 tiplabels(pch=19, col=tree.df$color[match(dend$tip.label, tree.df$gene)])
 nodelabels(dend$node.label, frame='none', cex=0.5, adj=c(1.2,-0.2))
-axisPhylo(1)
 
 
+dend$parasite <- tree.df$parasite[match(dend$tip.label, tree.df$gene)]
+tiplabels(pch=4, cex=1.5, tip=which(dend$parasite))
 
+
+axisPhylo(1, cex=0.5)
+
+
+legend('bottomleft', names(class_colors), fill=class_colors, inset=0.02, cex=0.8)
 
 
 # Trying different types --------------------------------------------------
