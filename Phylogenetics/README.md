@@ -1,29 +1,24 @@
 
 
+## Prerequisites
+* MEGA 
+* mafft 
+* ~~raXml~~
+* figtree 
+* R::ape 
+* ~~R::dendextend~~
+
+
 # What's the deal with this gene family??
 
-## To install
-• MEGA 
-• mafft 
-• raXml 
-• figtree 
-• R::ape 
-• R::dendextend 
-
-
-adding another line here
-
-
-• We have a set of homologous genes (a family) coming from several species of plant.
-• We suspect that this family may have an HGT event, but we need to show this concretely.
+We have a set of homologous genes (a family) coming from several species of plant. We suspect that this family may have an HGT event, but we need to show this concretely.
 
 Data source:
 https://doi.org/10.1073/pnas.1608765113
-Orthogroup 3861
 
-From this, we have a set of protein-sequences in FASTA format.
 
-Gene families are derived based on incongruent species and gene phylogenies
+Gene families from this paper are derived based on incongruent species and gene phylogenies
+I have downloaded 'Orthogroup 3861' from this paper as a set of protein-sequences in FASTA format. 
 
 ## 1) Form a gene-family alignment
 
@@ -39,7 +34,7 @@ This will give us a sense of the relationship between these genes.
 3. save the output (don't close mega!)
 
 
-## 2) make an tree.
+## 2) make a tree.
 
 #### In mega we can make some trees
 1. Try a NJ tree - does it work? Need to curate any sequences?
@@ -56,6 +51,5 @@ This will give us a sense of the relationship between these genes.
 ## 4) Identify genes that are vertically- or horizontally-derived
 Annotation of tree!
 
-
-• We are going to do this totally in R, using the provided project.
+1. We are going to do this totally in R, using the provided project.
 
