@@ -107,6 +107,9 @@ blastn (with the megablast algorithm) can do genome-wide comparisons between gen
 
 `blastn -query ./sequences/Mafric.fna -subject ./sequences/Mavium.fna -outfmt 6 -out Mafric_Mavium.txt -task megablast`
 
+**what does the resulting file look like?**
+
+
 
 Lets knock this out with a bash script:
 
@@ -121,7 +124,6 @@ do
 		blastn -query ./sequences/$A'.fna' -subject ./sequences/$B'.fna' -outfmt 6 -out "blast_outputs/"$A"_"$B.txt -task megablast
 	done
 done
-
 ```
 
 Looks cool, but is coarse. We can't zoom in. Can't get any sense of the detailed regions. Blast doesn't work perfectly, as we get over-plotting for similar genomes.
