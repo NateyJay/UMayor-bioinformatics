@@ -1,0 +1,1 @@
+(Mlepra_CAC30138.1:0.46792,(Mbovis_ALV11387.1:-0,(Mmicro_AMC60049.1:0,Mafric_CCC27449.1:0)n2:0)n1:0.46792)n0;

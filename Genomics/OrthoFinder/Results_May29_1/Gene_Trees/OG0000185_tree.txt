@@ -1,0 +1,1 @@
+((Mmicro_AMC60270.1:0,(Mbovis_ALV11575.1:0,Mafric_CCC27651.1:0):0):0.08375,((Mafric_CCC25147.1:0,Mmicro_AMC57513.1:0):0,Mbovis_ALV09350.1:0):0.08375);

@@ -1,0 +1,1 @@
+(Mavium_AAS03885.1:0.14851,(Mmicro_AMC59491.1:0,(Mafric_CCC26951.1:0,Mbovis_ALV10950.1:0)n2:0)n1:0.14851)n0;

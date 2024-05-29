@@ -1,0 +1,1 @@
+((Mmicro_AMC58499.1:1.36488,Mbovis_ALV11770.1:0):0,(Mmicro_AMC60511.1:0,Mafric_CCC27872.1:0):0);

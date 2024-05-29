@@ -1,0 +1,12 @@
+2024-05-29 13:27:26 : Started OrthoFinder version 2.4.0
+Command Line: /home/opt/OrthoFinder-2.4.0/orthofinder -f proteomes/
+
+WorkingDirectory_Base: /home2/njohnson/+Teaching/2024-Bioinf1/genomics/proteomes/OrthoFinder/Results_May29/WorkingDirectory/
+
+Species used: 
+0: Mafric.faa
+1: Mavium.faa
+2: Mbovis.faa
+3: Mlepra.faa
+4: Mmicro.faa
+

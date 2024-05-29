@@ -1,0 +1,1 @@
+(Mlepra_CAC30917.1:0,((Mafric_CCC28546.1:0,(Mmicro_AMC61249.1:0,Mbovis_ALV12386.1:0):0):0,Mavium_AAS06778.1:0):0);
