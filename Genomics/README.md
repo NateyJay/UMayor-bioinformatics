@@ -136,7 +136,8 @@ They give us a guide here: [minimap2 github](https://github.com/lh3/minimap2)
 
 Lets try this with just two genomes first. Let's quickly check the help to get a sense of what mode to use.
 
-`minimap2 -h
+```
+minimap2 -h
 Usage: minimap2 [options] <target.fa>|<target.idx> [query.fa] [...]
 Options:
   Indexing:
@@ -189,15 +190,34 @@ Options:
                  - ava-pb/ava-ont - PacBio CLR/Nanopore read overlap
 
 See `man ./minimap2.1' for detailed description of these and other advanced command-line options.
-`
+```
+
+Notice the last item `preset`. That's really important for choosing how minimap works. *Minimap* is very flexible and can serve multiple purposes - what preset do we use??
+
+**Run minimap2 to generate a .paf file**
+
+# 4) Looking at it in a browser
 
 
-Next, we will demonstrate this in jbrowse - an very versatile tool for omics viewing.
+Now that we have a `.paf`, lets load it up in jbrowse2. Some general outline of steps:
 
-Finally, lets load in the genes - can we see any interesting cases?
-* find an example of inversion
-* deletion
-* duplication
+1) Load up a dot-plot view.
+2) Assign your genome sequences (order is important).
+3) Include the `.paf` 
+
+
+Then, we can look at it.
+* does it look better than in R?
+* worse? how?
+
+
+4) Try to zoom in on a section
+5) open it in the synteny viewer.
+
+Now, we want to see some genes
+
+6) Load some more tracks - a genome annotation track for both.
+7) Look for some examples of inversions, deletions, duplications!
 
 
 
