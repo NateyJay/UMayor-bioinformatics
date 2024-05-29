@@ -1,5 +1,5 @@
 
-# Comparing genomes
+## Comparing genomes
 
 We want to do some whole-genome comparisons of genomes. The NCBI has made a really cool tool for this:
 [Comparative Genome Viewer](https://www.ncbi.nlm.nih.gov/cgv)
@@ -7,7 +7,7 @@ We want to do some whole-genome comparisons of genomes. The NCBI has made a real
 *Unfortunately*, this tool is limited to very-high-quality assemblies in the NCBI. These are the gold standards...
 
 
-# Lets explore tuberculosis! 🤓
+## Lets explore tuberculosis! 🤓
 
 Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic, nonmotile bacteria. Some related bacteria even cause other serious diseases for humans.
 
@@ -24,7 +24,7 @@ Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic
 
 
 
-# To install:
+## To install:
 
 * datasets (from NCBI)
 * minimap2 (using apt or homebrew)
@@ -32,7 +32,7 @@ Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic
 * blastn (using apt or homebrew)
 
 
-# 1) Download the data
+## 1) Download the data
 
 We are going to use datasets to pull all of the assembly information. This will include many key files:
 * genomic sequence (.fna, .fa, .fasta)
@@ -100,7 +100,7 @@ I think it most easy to rename our sequences at this point.
 ```
 
 
-# 2) Lets try this the (really) simple way (blast and R)
+## 2) Lets try this the (really) simple way (blast and R)
 
 blastn (with the megablast algorithm) can do genome-wide comparisons between genomes. Most simply, this would be 1 by 1.
 
@@ -127,7 +127,7 @@ done
 Looks cool, but is coarse. We can't zoom in. Can't get any sense of the detailed regions. Blast doesn't work perfectly, as we get over-plotting for similar genomes.
 
 
-# 3) Let's get more complicated
+## 3) Let's get more complicated
 
 Using minimap2, we can do a whole genome alignment. This is pretty simple if you can get minimap2 to run.
 
@@ -196,7 +196,7 @@ Notice the last item `preset`. That's really important for choosing how minimap 
 
 **Run minimap2 to generate a .paf file**
 
-# 4) Looking at it in a browser
+## 4) Looking at it in a browser
 
 
 Now that we have a `.paf`, lets load it up in jbrowse2. Some general outline of steps:
