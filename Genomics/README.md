@@ -30,7 +30,7 @@ Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic
 * minimap2 (using apt or homebrew)
 * jbrowse2
 * blastn (using apt or homebrew)
-
+* orthofinder (from conda...)
 
 ## 1) Download the data
 
@@ -224,6 +224,86 @@ Now, we want to see some genes
 
 
 
+## 5) Orthofinder
+
+This is the all star tool. So far we have been doing genome-wide comparisons. Orthofinder will let us do gene-level analyses... for all genes... like, all of them.
+
+Orthofinder is a bit tough to install. We will try to work with it on the cluster.
+
+
+First, we need to get our proteome sequences on the cluster (`.faa`). To upload we can use `scp` (secure copy):
+```
+# scp from_dir to_dir
+
+# if the dir is on a server:
+# user@server:dir
+
+scp ./sequences/*.faa njohnson@darwin:/home2/njohnson/+Teaching/2024-Bioinf1/genomics/proteomes
+```
+
+
+Now we can load orthofinder and its required modules:
+```
+module avail # to list all modules
+
+module load orthofinder
+
+cd /home2/njohnson/+Teaching/2024-Bioinf1/genomics
+
+srun orthofinder -f proteomes/
+```
+
+Is this efficiently using the cluster?
+
+```
+# accessing the cluster again and checking node usage:
+ssh njohnson@darwin
+
+gnodes
+
++- slim - 28 cores & 62GB -----------------+------------------------------------------+------------------------------------------+------------------------------------------+
+| n001   60G  ..........................._ | n005   62G  ............................ | n009   62G  ............................ | n013   62G  ............................ |
+| n002   62G  ............................ | n006   62G  ............................ | n010   62G  ............................ | n014   62G  ............................ |
+| n003   62G  ............................ | n007   62G  ............................ | n011   62G  ............................ | n015   62G  ............................ |
+| n004   62G  ............................ | n008   62G  ............................ | n012   62G  ............................ | n016   62G  ............................ |
++------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+
+
++- test - 32 cores & 62GB -----------------------+
+| darwin   62G                DOWN               |
++------------------------------------------------+
+
+```
+
+
+We need to give the right number of cores to slurm!
+
+```
+srun -c 28 orthofinder -f proteomes/
+
+
++- slim - 28 cores & 62GB -----------------+------------------------------------------+------------------------------------------+------------------------------------------+
+| n001    0G  __________________________OO | n005   62G  ............................ | n009   62G  ............................ | n013   62G  ............................ |
+| n002   62G  ............................ | n006   62G  ............................ | n010   62G  ............................ | n014   62G  ............................ |
+| n003   62G  ............................ | n007   62G  ............................ | n011   62G  ............................ | n015   62G  ............................ |
+| n004   62G  ............................ | n008   62G  ............................ | n012   62G  ............................ | n016   62G  ............................ |
++------------------------------------------+------------------------------------------+------------------------------------------+------------------------------------------+
+
++- test - 32 cores & 62GB -----------------------+
+| darwin   62G                DOWN               |
++------------------------------------------------+
+```
+
+Now, lets download the result and have a look at it
+
+```
+scp -r njohnson@darwin:/home2/njohnson/+Teaching/2024-Bioinf1/genomics/proteomes/OrthoFinder ./
+```
+ 
+Looking through the results:
+1) lets look at the statistics summary `Statistics_PerSpecies.tsv`
+2) what does the species tree look like? Does this "jive" with what we found?
+3) lets look at the orthogroups with genes - how well do they look resolved?
+4) what about some of the events mentioned above?
 
 
 
