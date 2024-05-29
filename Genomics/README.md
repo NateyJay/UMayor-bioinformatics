@@ -26,11 +26,10 @@ Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic
 
 ## To install:
 
-* datasets (from NCBI)
+* datasets (from NCBI: <https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/>)
 * minimap2 (using apt or homebrew)
-* jbrowse2
+* jbrowse2 (<https://jbrowse.org/jb2/>)
 * blastn (using apt or homebrew)
-* orthofinder (from conda...)
 
 ## 1) Download the data
 
