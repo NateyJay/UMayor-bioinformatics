@@ -28,8 +28,18 @@ Mycobacteria are the predominant cause of tuberculosis. These are small, aerobic
 
 * datasets (from NCBI: <https://www.ncbi.nlm.nih.gov/datasets/docs/v2/download-and-install/>)
 * minimap2 (using apt or homebrew)
+  
+```
+sudo apt-get install minimap2 # installing in linux
+brew install minimap2
+```
+
 * jbrowse2 (<https://jbrowse.org/jb2/>)
 * blastn (using apt or homebrew)
+
+```
+sudo apt-get install ncbi-blast+ # installing in linux
+```
 
 ## 1) Download the data
 
@@ -192,6 +202,20 @@ Options:
 
 See `man ./minimap2.1' for detailed description of these and other advanced command-line options.
 ```
+
+```
+mkdir minimap_alignments
+
+minimap2 -x asm10 ./sequences/Mmicro.fna ./sequences/Mbovis.fna > minimap_alignments/Mmicro_Mbovis.paf
+minimap2 -x asm10 ./sequences/Mmicro.fna ./sequences/Mafric.fna > minimap_alignments/Mmicro_Mafric.paf
+minimap2 -x asm10 ./sequences/Mmicro.fna ./sequences/Mlepra.fna > minimap_alignments/Mmicro_Mlepra.paf
+minimap2 -x asm10 ./sequences/Mmicro.fna ./sequences/Mavium.fna > minimap_alignments/Mmicro_Mavium.paf
+
+
+```
+
+
+
 
 Notice the last item `preset`. That's really important for choosing how minimap works. *Minimap* is very flexible and can serve multiple purposes - what preset do we use??
 
