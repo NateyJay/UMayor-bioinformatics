@@ -3,7 +3,7 @@
 
 
 
-blast.df <- read.delim('../working/blast_outputs/Mavium_Mmicro.txt', header=F)
+blast.df <- read.delim('./blast_outputs/Mavium_Mmicro.txt', header=F)
 head(blast.df)
 names(blast.df) <- c('qseqid',
   'sseqid',
@@ -30,7 +30,7 @@ plot(blast.df$qstart, blast.df$sstart, pch=19, cex=0.2)
 # plotting all of them ----------------------------------------------------
 
 blast_dot_plot <- function(a,b) {
-  blast.df <- read.delim(str_glue('../working/blast_outputs/{a}_{b}.txt'), header=F)
+  blast.df <- read.delim(str_glue('./blast_outputs/{a}_{b}.txt'), header=F)
   head(blast.df)
   names(blast.df) <- c('qseqid',
                        'sseqid',
